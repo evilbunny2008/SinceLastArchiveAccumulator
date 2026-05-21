@@ -1,2 +1,2 @@
-# since_last_archive
+# SinceLastArchiveAccumulator
 Accumulated data for rain since last archive record
