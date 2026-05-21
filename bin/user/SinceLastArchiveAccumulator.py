@@ -6,11 +6,11 @@ log = logging.getLogger(__name__)
 
 log.info("ArchiveListenerService running...")
 
-class Service(weewx.engine.StdService):
+class SinceLastArchiveAccumulatorService(weewx.engine.StdService):
 
     def __init__(self, engine, config_dict):
 
-        super(ArchiveListenerService, self).__init__(engine, config_dict)
+        super(SinceLastArchiveAccumulatorService, self).__init__(engine, config_dict)
 
         self.bind(weewx.NEW_ARCHIVE_RECORD, self.handle_archive_record)
         self.bind(weewx.NEW_LOOP_PACKET, self.new_loop_packet)
