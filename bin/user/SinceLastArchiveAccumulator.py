@@ -21,4 +21,4 @@ class Service(weewx.engine.StdService):
 
     def new_loop_packet(self, event):
       """ Handle loop packets """
-      log.info(f"New loop packets! "{event.packet}")
+      log.info(f"New loop packets! {event.packet}")
