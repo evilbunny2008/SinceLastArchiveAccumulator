@@ -24,6 +24,6 @@ class SinceLastArchiveAccumulatorInstaller(ExtensionInstaller):
             'files': [('bin/user', ['bin/user/SinceLastArchiveAccumulator.py'])]
         }
 
-        install_dict['prep_services'] = 'user.SinceLastArchiveAccumulator.Service'
+        install_dict['prep_services'] = 'user.SinceLastArchiveAccumulator.SinceLastArchiveAccumulatorService'
 
         super().__init__(install_dict)
