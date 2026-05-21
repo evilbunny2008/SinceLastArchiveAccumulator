@@ -15,10 +15,15 @@ class SinceLastArchiveAccumulatorService(weewx.engine.StdService):
         self.bind(weewx.NEW_ARCHIVE_RECORD, self.handle_archive_record)
         self.bind(weewx.NEW_LOOP_PACKET, self.new_loop_packet)
 
+        self.rain = 0
+        self.ET = 0
+
     def handle_archive_record(self, event):
       """ Handle archive records """
       log.info(f"New archive record! {event.record}")
 
     def new_loop_packet(self, event):
       """ Handle loop packets """
-      log.info(f"New loop packets! {event.packet}")
+
+      updated_record = weewx.units.to_std_system(event.packet, topic_dict['unit_system'])
+      log.info(f"New loop packet {updated_record}")
