@@ -4,7 +4,7 @@ import weewx.engine
 
 log = logging.getLogger(__name__)
 
-log.info("ArchiveListenerService running...")
+log.info("SinceLastArchiveAccumulatorService running...")
 
 class SinceLastArchiveAccumulatorService(weewx.engine.StdService):
 
