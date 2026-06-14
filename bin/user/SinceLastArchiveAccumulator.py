@@ -32,7 +32,7 @@ class SinceLastArchiveAccumulatorService(weewx.engine.StdService):
       self.values_archive.update(event.record)
       event.record = self.values_archive
 
-      log.info(f"New archive record! {event.record}")
+      #log.info(f"New archive record! {event.record}")
 
     def new_loop_packet(self, event):
       """ Handle loop packets """
